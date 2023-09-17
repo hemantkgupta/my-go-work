@@ -1,0 +1,12 @@
+syntax = "proto3";
+package chat;
+
+option go_package = "github.com/hemantkgupta/my-go-work/grpc-basic/chat/proto";
+
+message Message {
+  string body = 1;
+}
+
+service  chatService {
+  rpc sayHello(Message) returns (Message) {}
+}
