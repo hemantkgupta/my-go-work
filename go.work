@@ -3,3 +3,4 @@ go 1.21.0
 use ./grpc-basic
 use jwt-work
 use sqlite
+use postgres
