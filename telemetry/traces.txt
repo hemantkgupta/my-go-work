@@ -1,0 +1,178 @@
+{
+	"Name": "Poll",
+	"SpanContext": {
+		"TraceID": "f358ed2e10ca8c6b400cd5d44b5fece8",
+		"SpanID": "5c6d93f8fa067221",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "f358ed2e10ca8c6b400cd5d44b5fece8",
+		"SpanID": "51b78be593227a7f",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"SpanKind": 1,
+	"StartTime": "0001-01-01T00:00:00Z",
+	"EndTime": "0001-01-01T00:00:00Z",
+	"Attributes": [
+		{
+			"Key": "request.n",
+			"Value": {
+				"Type": "STRING",
+				"Value": "100"
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "fib",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "Fibonacci",
+	"SpanContext": {
+		"TraceID": "cf3bc1e0b3b07913e234106065d0da8a",
+		"SpanID": "21a7e7af5c5cfbe9",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "cf3bc1e0b3b07913e234106065d0da8a",
+		"SpanID": "73a20230c8726eb6",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"SpanKind": 1,
+	"StartTime": "0001-01-01T00:00:00Z",
+	"EndTime": "0001-01-01T00:00:00Z",
+	"Attributes": null,
+	"Events": [
+		{
+			"Name": "exception",
+			"Attributes": [
+				{
+					"Key": "exception.type",
+					"Value": {
+						"Type": "STRING",
+						"Value": "*errors.errorString"
+					}
+				},
+				{
+					"Key": "exception.message",
+					"Value": {
+						"Type": "STRING",
+						"Value": "unsupported Fibonacci number 100: too large"
+					}
+				}
+			],
+			"DroppedAttributeCount": 0,
+			"Time": "0001-01-01T00:00:00Z"
+		}
+	],
+	"Links": null,
+	"Status": {
+		"Code": "Error",
+		"Description": "unsupported Fibonacci number 100: too large"
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "fib",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "Write",
+	"SpanContext": {
+		"TraceID": "cf3bc1e0b3b07913e234106065d0da8a",
+		"SpanID": "73a20230c8726eb6",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "00000000000000000000000000000000",
+		"SpanID": "0000000000000000",
+		"TraceFlags": "00",
+		"TraceState": "",
+		"Remote": false
+	},
+	"SpanKind": 1,
+	"StartTime": "0001-01-01T00:00:00Z",
+	"EndTime": "0001-01-01T00:00:00Z",
+	"Attributes": null,
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 1,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "fib",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "Run",
+	"SpanContext": {
+		"TraceID": "f358ed2e10ca8c6b400cd5d44b5fece8",
+		"SpanID": "51b78be593227a7f",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "00000000000000000000000000000000",
+		"SpanID": "0000000000000000",
+		"TraceFlags": "00",
+		"TraceState": "",
+		"Remote": false
+	},
+	"SpanKind": 1,
+	"StartTime": "0001-01-01T00:00:00Z",
+	"EndTime": "0001-01-01T00:00:00Z",
+	"Attributes": null,
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 1,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "fib",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
