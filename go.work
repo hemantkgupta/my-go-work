@@ -17,4 +17,5 @@ use (
 	./errors
 	./swagger
 	./telemetry
+	./testing
 )
