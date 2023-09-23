@@ -5,6 +5,13 @@ import (
 )
 
 func main() {
+
+	//  Array to slice conversion use [:]
+	xArray := [4]int{5, 6, 7, 8}
+	xSlice := xArray[:]
+	fmt.Println(xArray)
+	fmt.Println(xSlice)
+
 	x := [4]int{5, 6, 7, 8}
 
 	y := x[:2]
