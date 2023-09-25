@@ -18,6 +18,6 @@ func (mi MyInt) String() string {
 }
 
 func main() {
-	s := ImpossibleStruct[int]{10}
-	s2 := ImpossibleStruct[MyInt]{10}
+	//s := ImpossibleStruct[int]{10}
+	//s2 := ImpossibleStruct[MyInt]{10}
 }

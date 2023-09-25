@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var intStack Stack[int]
+	var intStack Stack1[int]
 	intStack.Push(10)
 	intStack.Push(20)
 	intStack.Push(30)
@@ -11,15 +11,15 @@ func main() {
 	fmt.Println(v, ok)
 }
 
-type Stack[T any] struct {
+type Stack1[T any] struct {
 	vals []T
 }
 
-func (s *Stack[T]) Push(val T) {
+func (s *Stack1[T]) Push(val T) {
 	s.vals = append(s.vals, val)
 }
 
-func (s *Stack[T]) Pop() (T, bool) {
+func (s *Stack1[T]) Pop() (T, bool) {
 	if len(s.vals) == 0 {
 		var zero T
 		return zero, false
