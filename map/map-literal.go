@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	// Empty map literal
+	// Empty map literal - Remember the syntax
 	totalWins := map[string]int{}
 
 	fmt.Println(totalWins)

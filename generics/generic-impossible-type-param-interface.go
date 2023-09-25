@@ -18,6 +18,9 @@ func (mi MyInt) String() string {
 }
 
 func main() {
+	// int does not satisfy ImpossiblePrintableInt (missing method String)
 	//s := ImpossibleStruct[int]{10}
-	//s2 := ImpossibleStruct[MyInt]{10}
+
+	// MyInt does not satisfy ImpossiblePrintableInt (possibly missing ~ for int in ImpossiblePrintableInt)
+	// s2 := ImpossibleStruct[MyInt]{10}
 }

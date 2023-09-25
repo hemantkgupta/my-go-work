@@ -1,13 +1,21 @@
 package main
 
-type Tree1 struct {
-	val         Orderable
-	left, right *Tree1
+type Orderable interface {
+	// Order returns:
+	// a value < 0 when the Orderable is less than the supplied value,
+	// a value > 0 when the Orderable is greater than the supplied value,
+	// and 0 when the two values are equal.
+	Order(any) int
 }
 
-func (t *Tree1) Insert(val Orderable) *Tree1 {
+type Tree struct {
+	val         Orderable
+	left, right *Tree
+}
+
+func (t *Tree) Insert(val Orderable) *Tree {
 	if t == nil {
-		return &Tree1{val: val}
+		return &Tree{val: val}
 	}
 
 	switch comp := val.Order(t.val); {
@@ -26,15 +34,7 @@ func (oi OrderableInt) Order(val any) int {
 }
 
 func main() {
-	var it *Tree1
+	var it *Tree
 	it = it.Insert(OrderableInt(5))
 	it = it.Insert(OrderableInt(3))
-}
-
-type Orderable interface {
-	// Order returns:
-	// a value < 0 when the Orderable is less than the supplied value,
-	// a value > 0 when the Orderable is greater than the supplied value,
-	// and 0 when the two values are equal.
-	Order(any) int
 }
