@@ -18,14 +18,14 @@ func main() {
 
 	// func json.Marshal(v any) ([]byte, error)
 	// Marshal returns the JSON encoding of v.
-	//Marshal traverses the value v recursively.
-	json_data, err := json.Marshal(u1)
+	// Marshal traverses the value v recursively.
+	json_data_byte_slice, err := json.Marshal(u1)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println(string(json_data))
+	fmt.Println(string(json_data_byte_slice))
 
 	users := []User{
 		{Id: 2, Name: "Roger Roe", Occupation: "driver"},

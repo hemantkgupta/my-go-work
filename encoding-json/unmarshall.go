@@ -17,7 +17,7 @@ func main() {
 	// Single struct
 	var u1 User
 
-	data := []byte(`{
+	json_data_byte_slice := []byte(`{
         "Id" : 1,
         "Name": "John Doe",
         "Occupation": "gardener"
@@ -25,7 +25,7 @@ func main() {
 	// func json.Unmarshal(data []byte, v any) error
 	// Unmarshal parses the JSON-encoded data and stores the result in the value pointed to by v.
 	// If v is nil or not a pointer, Unmarshal returns an InvalidUnmarshalError.
-	err := json.Unmarshal(data, &u1)
+	err := json.Unmarshal(json_data_byte_slice, &u1)
 
 	if err != nil {
 

@@ -6,7 +6,9 @@ import (
 )
 
 func main() {
-	now := time.Now()
+	// func time.Now() time.Time
+	// Now returns the current local time.
+	var now time.Time = time.Now()
 
 	fmt.Println("The current datetime is:", now)
 
