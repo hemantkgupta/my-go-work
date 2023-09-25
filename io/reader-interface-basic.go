@@ -17,7 +17,8 @@ func main() {
 }
 
 func countLetters(r io.Reader) (map[string]int, error) {
-	buf := make([]byte, 2048)
+	// Considering we are reading one byte for one char at once
+	buf := make([]byte, 1)
 	out := map[string]int{}
 	for {
 		// Read data into 2048 byte buffer
