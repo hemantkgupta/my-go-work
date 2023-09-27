@@ -15,14 +15,18 @@ func main() {
 		Field1: "Hemant",
 		Field2: 3,
 	}
-	MakeFooWrong(&f)
-	fmt.Println(f.Field1)
 
-	fa, err := MakeFooRight()
+	err := MakeFooWrong(&f)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(fa.Field1)
+	fmt.Println(f.Field1)
+
+	fr, err := MakeFooRight()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(fr.Field1)
 }
 
 func MakeFooWrong(f *Foo) error {
