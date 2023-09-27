@@ -18,4 +18,6 @@ use (
 	./swagger
 	./telemetry
 	./testing
+	./websocket
+	gorilla-mux
 )
