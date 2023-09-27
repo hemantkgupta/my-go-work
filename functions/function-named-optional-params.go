@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"fmt"
-	"os"
 )
 
 type MyFuncOpts struct {
@@ -37,7 +36,7 @@ func main() {
 	})
 
 	if err != nil {
-		fmt.Fprintln(os.Stderr, err)
+		fmt.Println(err)
 	}
 
 	err = MyFunc(MyFuncOpts{
@@ -46,6 +45,6 @@ func main() {
 	})
 
 	if err != nil {
-		fmt.Fprintln(os.Stderr, err)
+		fmt.Println(err)
 	}
 }

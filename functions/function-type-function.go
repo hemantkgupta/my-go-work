@@ -5,22 +5,22 @@ import (
 	"strconv"
 )
 
-func add(i int, j int) int { return i + j }
+func add2(i int, j int) int { return i + j }
 
-func sub(i int, j int) int { return i - j }
+func sub2(i int, j int) int { return i - j }
 
-func mul(i int, j int) int { return i * j }
+func mul2(i int, j int) int { return i * j }
 
-func div(i int, j int) int { return i / j }
+func div2(i int, j int) int { return i / j }
 
-type opFuncType func(int, int) int
+type opFuncType2 func(int, int) int
 
 // Functions are values
-var opMap = map[string]opFuncType{
-	"+": add,
-	"-": sub,
-	"*": mul,
-	"/": div,
+var opMap2 = map[string]opFuncType2{
+	"+": add2,
+	"-": sub2,
+	"*": mul2,
+	"/": div2,
 }
 
 func main() {
@@ -45,7 +45,7 @@ func main() {
 			continue
 		}
 		op := expression[1]
-		opFunc, ok := opMap[op]
+		opFunc, ok := opMap2[op]
 		if !ok {
 			fmt.Println("unsupported operator:", op)
 			continue
