@@ -5,9 +5,9 @@ import (
 	"time"
 )
 
-type HelloHandler struct{}
+type HelloHandler2 struct{}
 
-func (hh HelloHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (hh HelloHandler2) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Hello!\n"))
 }
 
@@ -17,7 +17,7 @@ func main() {
 		ReadTimeout:  30 * time.Second,
 		WriteTimeout: 90 * time.Second,
 		IdleTimeout:  120 * time.Second,
-		Handler:      HelloHandler{},
+		Handler:      HelloHandler2{},
 	}
 	err := s.ListenAndServe()
 	if err != nil {
