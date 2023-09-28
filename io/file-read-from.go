@@ -24,6 +24,9 @@ func main() {
 
 	defer f.Close()
 
+	// func (*os.File).ReadFrom(r io.Reader) (n int64, err error)
+	// ReadFrom implements io.ReaderFrom.
+
 	_, err = f.ReadFrom(r.Body)
 
 	if err != nil {

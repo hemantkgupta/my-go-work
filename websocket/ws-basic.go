@@ -38,7 +38,8 @@ func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "index.html")
-		w.Write([]byte("Hello!\n"))
+
+		//w.Write([]byte("Hello!\n"))
 	})
 
 	log.Println("Listening...")

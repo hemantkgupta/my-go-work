@@ -28,7 +28,8 @@ func main() {
 	// NewEncoder returns a new encoder that writes to w.
 	//
 	// func (*json.Encoder).Encode(v any) error
-	// Encode writes the JSON encoding of v to the stream, followed by a newline character.
+	// Encode writes the JSON encoding of v to the stream,
+	// followed by a newline character.
 	err = json.NewEncoder(tmpFile).Encode(toFile)
 	if err != nil {
 		panic(err)
@@ -48,7 +49,8 @@ func main() {
 	// NewDecoder returns a new decoder that reads from r.
 	//
 	// func (*json.Decoder).Decode(v any) error
-	// Decode reads the next JSON-encoded value from its input and stores it in the value pointed to by v.
+	// Decode reads the next JSON-encoded value from its input
+	// and stores it in the value pointed to by v.
 
 	err = json.NewDecoder(tmpFile2).Decode(&fromFile)
 	if err != nil {
