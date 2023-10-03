@@ -15,6 +15,7 @@ use gorm-gorilla
 use (
 	./benchmark
 	./errors
+	./goroutines
 	./swagger
 	./telemetry
 	./testing
